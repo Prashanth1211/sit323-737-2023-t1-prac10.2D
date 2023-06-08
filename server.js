@@ -63,7 +63,7 @@ app.get("/add", (req,res)=>{
     }
     logger.info('Parameters '+n1+' and '+n2+' received for addition');
     const result = add(n1,n2);
-    res.status(200).json({statuscocde:200, data: result }); 
+    res.status(200).json({statuscocde:200, data: result,message:"Addition is successful" }); 
     } catch(error) { 
         console.error(error)
         res.status(500).json({statuscocde:500, msg: error.toString() })
